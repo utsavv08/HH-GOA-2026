@@ -4,6 +4,8 @@ An interactive, high-performance web app that lets builders create and customize
 
 Built for **Hacker House Goa 2026** (28–31 Oct 2026 • Goa, India) by **TEAM UNO**.
 
+🌐 **Live Demo**: [https://hh-goa-2026-dusky.vercel.app](https://hh-goa-2026-dusky.vercel.app)
+
 ---
 
 ## ✨ Features
@@ -12,7 +14,7 @@ Built for **Hacker House Goa 2026** (28–31 Oct 2026 • Goa, India) by **TEAM 
 - 🏷️ **Dynamic Builder Identity Tags**: Customize your builder tag (e.g. `NAME // ROLE`, `SOLANA // RUST`, `BUILDER // 247`).
 - 📸 **Photo Controls**: Drag & drop photo upload with zoom in/out, pan, and real-time canvas rendering.
 - 🖤 **Optimized X / Twitter Dark Mode Export**: Baked solid `#000000` canvas background ensures seamless aesthetic when posted or pasted on X.
-- 🚀 **1-Click Share on X**: Pre-formatted dual-link tweet generator with instant local ticket API hosting and external backend fallback.
+- 🚀 **1-Click Share on X**: Pre-formatted dual-link tweet generator with direct 1-tap redirect to Twitter compose.
 - 👥 **Team UNO Credits**: Interactive retro modal spotlighting the build team with direct links to 𝕏 and LinkedIn profiles.
 
 ---
@@ -21,7 +23,7 @@ Built for **Hacker House Goa 2026** (28–31 Oct 2026 • Goa, India) by **TEAM 
 
 - **Frontend**: Vanilla HTML5, CSS3, JavaScript (HTML5 Canvas 2D Engine)
 - **Fonts**: Space Mono, Bebas Neue, Inter, Noto Sans Devanagari
-- **Backend**: Zero-dependency Node.js HTTP server (`server.js`) with `/api/upload-ticket` & `/ticket/:id` viewer route
+- **Deployment**: Vercel Global Edge CDN + Serverless Functions
 
 ---
 
@@ -29,14 +31,15 @@ Built for **Hacker House Goa 2026** (28–31 Oct 2026 • Goa, India) by **TEAM 
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/<your-username>/hh-goa-pfp.git
-cd hh-goa-pfp
+git clone https://github.com/utsavv08/HH-GOA-2026.git
+cd HH-GOA-2026
 ```
 
 ### 2. Run the local server
 ```bash
-node server.js
+node server.local.js
 ```
+*(or `npm run dev`)*
 
 ### 3. Open in your browser
 Navigate to [https://hh-goa-2026-dusky.vercel.app/].
