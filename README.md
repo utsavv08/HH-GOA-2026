@@ -39,7 +39,7 @@ node server.js
 ```
 
 ### 3. Open in your browser
-Navigate to [http://localhost:3000](https://hh-goa-2026-dusky.vercel.app/).
+Navigate to [https://hh-goa-2026-dusky.vercel.app/].
 
 ---
 
