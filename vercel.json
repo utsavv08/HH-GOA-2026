@@ -1,0 +1,6 @@
+{
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/ticket/:id", "destination": "/view.html?id=:id" }
+  ]
+}

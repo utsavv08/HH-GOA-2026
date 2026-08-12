@@ -122,6 +122,10 @@ const server = http.createServer((req, res) => {
   });
 });
 
-server.listen(PORT, () => {
-  console.log(`HH Goa Server running at http://localhost:${PORT}`);
-});
+if (require.main === module) {
+  server.listen(PORT, () => {
+    console.log(`HH Goa Server running at http://localhost:${PORT}`);
+  });
+}
+
+module.exports = server;
