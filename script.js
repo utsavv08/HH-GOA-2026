@@ -433,7 +433,6 @@ if (downloadBtn) {
     link.download = 'hh-goa-2026-pfp.png';
     link.href = canvas.toDataURL('image/png');
     link.click();
-    showToast('✨ PFP image downloaded successfully (1080×1080)!');
   });
 }
 
@@ -514,6 +513,7 @@ if (shareBtn) {
     try {
       // 1. Get high-quality jpeg data for backend upload
       const imageData = canvas.toDataURL('image/jpeg', 0.85);
+      try { localStorage.setItem('hh_goa_pfp_saved', imageData); } catch (e) {}
 
       // 2. Upload to ticket backend
       const ticketUrl = await uploadToTicketBackend(imageData);

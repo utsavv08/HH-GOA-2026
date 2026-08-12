@@ -3,228 +3,50 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HH Goa 2026 — My Builder PFP</title>
-
-  <!-- Twitter / OG Meta Tags (static fallback — dynamic image set via query param) -->
+  <title>HH Goa 2026 PFP</title>
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="HH Goa 2026 Builder PFP">
-  <meta name="twitter:description" content="Check out my official Hacker House Goa 2026 PFP! 🌴🚀 Create yours at hhgoa.com">
-  <meta property="og:title" content="HH Goa 2026 Builder PFP">
-  <meta property="og:description" content="Check out my official Hacker House Goa 2026 PFP! 🌴🚀">
-  <meta property="og:type" content="website">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-
+  <meta name="twitter:title" content="HH Goa 2026 PFP">
+  <meta name="twitter:description" content="Check out my official HH Goa 2026 PFP! 🌴🚀">
   <style>
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-
-    body {
-      background-color: #0B3D0B;
-      background-image: 
-        radial-gradient(ellipse at 30% 80%, rgba(82, 183, 136, 0.12) 0%, transparent 60%),
-        radial-gradient(ellipse at 70% 20%, rgba(255, 215, 0, 0.06) 0%, transparent 50%);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      font-family: 'Inter', sans-serif;
-      color: #F5E6C8;
-      padding: 24px;
-    }
-
-    .viewer-card {
-      text-align: center;
-      max-width: 560px;
+    html, body {
       width: 100%;
-    }
-
-    .viewer-badge {
-      display: inline-block;
-      font-family: 'Space Mono', monospace;
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: #FFD700;
-      background: rgba(255, 215, 0, 0.1);
-      border: 1px solid rgba(255, 215, 0, 0.25);
-      border-radius: 20px;
-      padding: 6px 18px;
-      margin-bottom: 20px;
-    }
-
-    .viewer-title {
-      font-family: 'Space Mono', monospace;
-      font-size: clamp(18px, 3vw, 26px);
-      font-weight: 700;
-      color: #FFFFFF;
-      margin-bottom: 8px;
-      text-shadow: 0 2px 8px rgba(0,0,0,0.5);
-    }
-
-    .viewer-subtitle {
-      font-size: 14px;
-      color: rgba(245, 230, 200, 0.7);
-      margin-bottom: 28px;
-    }
-
-    .pfp-frame {
-      position: relative;
-      display: inline-block;
-      border-radius: 18px;
-      overflow: hidden;
-      box-shadow: 
-        0 8px 32px rgba(0, 0, 0, 0.5),
-        0 0 0 3px rgba(255, 215, 0, 0.15);
-    }
-
-    .pfp-frame img {
-      display: block;
-      max-width: 90vw;
-      max-height: 70vh;
-      width: 480px;
-      border-radius: 18px;
-    }
-
-    .viewer-actions {
-      margin-top: 28px;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      background-color: #000000;
       display: flex;
-      gap: 12px;
       justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    .btn-viewer {
-      display: inline-flex;
       align-items: center;
-      gap: 8px;
-      font-family: 'Space Mono', monospace;
-      font-size: 13px;
-      font-weight: 700;
-      letter-spacing: 0.8px;
-      text-transform: uppercase;
-      text-decoration: none;
-      padding: 12px 24px;
-      border-radius: 10px;
-      border: 2px solid;
-      cursor: pointer;
-      transition: transform 0.15s ease, box-shadow 0.15s ease;
+      overflow: hidden;
     }
-
-    .btn-viewer:hover {
-      transform: translate(-1px, -1px);
-    }
-
-    .btn-create {
-      background: #FFD700;
-      color: #0B3D0B;
-      border-color: #000;
-      box-shadow: 3px 3px 0px #FF1493;
-    }
-
-    .btn-create:hover {
-      box-shadow: 5px 5px 0px #FF1493;
-    }
-
-    .btn-download {
-      background: transparent;
-      color: #F5E6C8;
-      border-color: rgba(245, 230, 200, 0.3);
-    }
-
-    .btn-download:hover {
-      border-color: #FFD700;
-      color: #FFD700;
-    }
-
-    .viewer-footer {
-      margin-top: 36px;
-      font-family: 'Space Mono', monospace;
-      font-size: 11px;
-      letter-spacing: 2px;
-      color: rgba(245, 230, 200, 0.4);
-      text-transform: uppercase;
-    }
-
-    .error-state {
-      font-size: 16px;
-      color: rgba(245, 230, 200, 0.6);
-      margin-top: 20px;
-    }
-
-    .loading-spinner {
-      width: 36px;
-      height: 36px;
-      border: 3px solid rgba(255, 215, 0, 0.2);
-      border-top: 3px solid #FFD700;
-      border-radius: 50%;
-      animation: spin 0.8s linear infinite;
-      margin: 20px auto;
-    }
-
-    @keyframes spin {
-      to { transform: rotate(360deg); }
+    img {
+      max-width: 96vw;
+      max-height: 96vh;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      display: block;
+      background-color: #000000;
     }
   </style>
 </head>
 <body>
-
-  <div class="viewer-card">
-    <div class="viewer-badge">🌴 HH GOA 2026</div>
-    <h1 class="viewer-title">Builder PFP</h1>
-    <p class="viewer-subtitle">Official Hacker House Goa 2026 Profile Frame</p>
-
-    <div id="image-container">
-      <div class="loading-spinner" id="loader"></div>
-    </div>
-
-    <div class="viewer-actions">
-      <a href="./" class="btn-viewer btn-create">🚀 Make Yours</a>
-      <button class="btn-viewer btn-download" id="download-btn" style="display: none;">⬇ Download</button>
-    </div>
-
-    <p class="viewer-footer">GOA, INDIA • 28–31 OCT 2026</p>
-  </div>
+  <img id="pfp-img" alt="HH Goa 2026 PFP">
 
   <script>
     const params = new URLSearchParams(window.location.search);
-    const imgSrc = params.get('img');
-    const container = document.getElementById('image-container');
-    const loader = document.getElementById('loader');
-    const dlBtn = document.getElementById('download-btn');
+    const id = params.get('id');
+    const img = document.getElementById('pfp-img');
+    const localImg = localStorage.getItem('hh_goa_pfp_saved') || localStorage.getItem('last_pfp_image');
 
-    if (imgSrc) {
-      const img = new Image();
-      img.crossOrigin = 'anonymous';
-      img.onload = () => {
-        loader.remove();
-        const frame = document.createElement('div');
-        frame.className = 'pfp-frame';
-        frame.appendChild(img);
-        container.appendChild(frame);
-        dlBtn.style.display = 'inline-flex';
-      };
+    if (id) {
+      img.src = `https://hh-goa-tickets.duckdns.org/uploads/${id}.jpg`;
       img.onerror = () => {
-        loader.remove();
-        container.innerHTML = '<p class="error-state">Unable to load image. It may have expired.</p>';
+        if (localImg) img.src = localImg;
       };
-      img.alt = 'HH Goa 2026 Builder PFP';
-      img.src = imgSrc;
-
-      // Download handler
-      dlBtn.addEventListener('click', () => {
-        const a = document.createElement('a');
-        a.href = imgSrc;
-        a.download = 'hh-goa-2026-pfp.png';
-        a.target = '_blank';
-        a.click();
-      });
-    } else {
-      loader.remove();
-      container.innerHTML = '<p class="error-state">No PFP found. <a href="./" style="color: #FFD700;">Create yours →</a></p>';
+    } else if (localImg) {
+      img.src = localImg;
     }
   </script>
 </body>
