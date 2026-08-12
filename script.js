@@ -522,22 +522,9 @@ if (shareBtn) {
       const caption = `Just claimed my official HH Goa 2026 PFP${tagSnippet}! 🌴🚀\n\nSee you in Goa this Oct 28–31.\n\nCheck out my PFP: ${ticketUrl}\n\nMake yours: ${siteUrl}\n\n#FrameInGoa #HHGoa2026 #BuildShipRepeat`;
       const tweetUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(caption)}`;
 
-      // 4. Directly open X
-      if (isMobile && navigator.share) {
-        canvas.toBlob(async (blob) => {
-          if (blob) {
-            const file = new File([blob], 'hh-goa-2026-pfp.png', { type: 'image/png' });
-            if (navigator.canShare && navigator.canShare({ files: [file] })) {
-              try {
-                await navigator.share({ text: caption, files: [file] });
-                return;
-              } catch (err) {
-                if (err.name === 'AbortError') return;
-              }
-            }
-          }
-          window.open(tweetUrl, '_blank');
-        }, 'image/png');
+      // 4. Directly open Twitter / X (bypasses phone's system share menu)
+      if (isMobile) {
+        window.location.href = tweetUrl;
       } else {
         window.open(tweetUrl, '_blank');
       }
