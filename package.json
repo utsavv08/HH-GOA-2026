@@ -1,0 +1,11 @@
+{
+  "name": "hh-goa-pfp-generator",
+  "version": "1.0.0",
+  "description": "Hacker House Goa 2026 - PFP Frame Generator",
+  "scripts": {
+    "dev": "npx -y serve@latest -l 3000",
+    "preview": "npx -y serve@latest -l 3000"
+  },
+  "keywords": ["hackathon", "pfp", "hacker-house", "goa"],
+  "license": "MIT"
+}

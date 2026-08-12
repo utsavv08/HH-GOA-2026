@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HH GOA | Hacker House Goa 2026</title>
+  <meta name="description" content="Create your Hacker House Goa 2026 PFP frame. Upload your photo, generate your badge-styled profile picture, and share it.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Space+Mono:wght@400;700&family=Noto+Sans+Devanagari:wght@700;900&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏖️</text></svg>">
+
+  <!-- Open Graph / Twitter Card for Rich Link Previews -->
+  <meta property="og:title" content="Hacker House Goa 2026 | #FrameInGoa PFP Generator">
+  <meta property="og:description" content="Claim your official Hacker House Goa profile badge. Customize your photo, set your builder handle, and rep the Goa vibe across the timeline.">
+  <meta property="og:image" content="assets/goa_frame_art.jpg">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Hacker House Goa 2026 | #FrameInGoa PFP Generator">
+  <meta name="twitter:description" content="Claim your official Hacker House Goa profile badge. Customize your photo, set your builder handle, and rep the Goa vibe.">
+  <meta name="twitter:image" content="assets/goa_frame_art.jpg">
+
+  <!-- HEIC image support for iPhone photos -->
+  <script src="https://cdn.jsdelivr.net/npm/heic2any@0.0.4/dist/heic2any.min.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== HERO / LANDING PAGE ===== -->
+  <section id="hero-section" class="hero">
+    <!-- Single seamless full-scene sunrise background from hhgoa.com -->
+    <div class="hero-bg">
+      <img src="assets/Sun_rise.png" alt="HH Goa sunrise scene" class="hero-bg-img" id="hero-bg-img">
+    </div>
+    <div class="hero-overlay"></div>
+
+    <header class="hero-header">
+      <div class="logo">
+        <img src="assets/2-47.svg" alt="2:47 PM Studio" class="logo-svg">
+      </div>
+      <button class="team-badge" id="team-btn" type="button">
+        TEAM UNO
+      </button>
+    </header>
+
+    <div class="hero-content">
+      <div class="hero-title">
+        <!-- Original Hacker House title image from hhgoa.com with centered Goa -->
+        <img src="assets/Hacker_house.png" alt="HACKER HOUSE" class="hh-title-img">
+        <img src="assets/goa_hindi.svg" alt="गोवा" class="goa-hindi-svg">
+      </div>
+
+      <div class="hero-action-block">
+        <div class="hero-action-text">
+          <p class="hero-action-lead">Your PFP. Your Goan aesthetic.</p>
+          <p class="hero-action-body">Give your profile picture the HH Goa 2026 treatment. Upload your photo, add the frame, and get a profile picture that’s ready to represent you across X and beyond.</p>
+        </div>
+        <button id="create-btn" class="btn-create-pfp">
+          CREATE YOUR FRAME NOW →
+        </button>
+      </div>
+    </div>
+
+    <footer class="hero-footer">
+      <span>GOA, INDIA • 28 – 31 OCT 2026</span>
+      <span>2:47 PM STUDIO</span>
+    </footer>
+  </section>
+
+  <!-- ===== PFP GENERATOR SECTION (OFFICIAL BEIGE CARD THEME) ===== -->
+  <section id="generator-section" class="generator hidden">
+    
+    <!-- Tropical Palm Trees Backdrop (Clean official trees asset) -->
+    <div class="gen-bg">
+      <img src="assets/footer_trees.png" alt="HH Goa Palm Trees" class="gen-bg-img">
+    </div>
+    <div class="gen-bg-overlay"></div>
+
+    <!-- Top Floral Garland Ribbon -->
+    <div class="garland-ribbon-top">
+      <img src="assets/019-group-59467-54-3485.svg" alt="" class="garland-svg">
+    </div>
+
+    <!-- Header Navigation -->
+    <header class="gen-header">
+      <button id="back-btn" class="btn-back">← BACK TO HOME</button>
+      <div class="gen-brand">
+        <img src="assets/2-47.svg" alt="2:47 PM Studio" class="gen-brand-logo">
+        <span class="gen-brand-sep">//</span>
+        <span class="gen-logo-text">HH GOA 2026</span>
+      </div>
+      <span class="gen-hashtag">#FrameInGoa</span>
+    </header>
+
+    <!-- Main Beige Card Container -->
+    <div class="beige-card-wrapper">
+      <div class="beige-card">
+        
+        <h1 class="task-title">HH Goa Frame Generator</h1>
+        
+        <p class="task-description">
+          Create your official Hacker House Goa 2026 profile badge in seconds. Upload your photo, personalize your builder identity, and share it with the community on X to rep the Goa vibe!
+        </p>
+
+        <!-- Main Studio Grid inside Beige Card -->
+        <div class="beige-studio-grid">
+          
+          <!-- Left Column: Frame Preview & Zoom -->
+          <div class="studio-preview-col">
+            <div class="badge-chip" id="badge-chip-display">BUILDER // 247</div>
+            
+            <div class="canvas-container" id="canvas-dropzone">
+              <canvas id="pfp-canvas" width="1080" height="1080"></canvas>
+              
+              <!-- Quick Floating Pan/Zoom Controls -->
+              <div class="photo-adjust-toolbar" id="photo-toolbar" style="display: none;">
+                <span class="toolbar-label">ZOOM:</span>
+                <button class="tool-btn" id="zoom-out-btn" title="Zoom Out">−</button>
+                <button class="tool-btn" id="zoom-reset-btn" title="Reset">100%</button>
+                <button class="tool-btn" id="zoom-in-btn" title="Zoom In">+</button>
+              </div>
+            </div>
+            
+            <p class="preview-hint">Drag & drop your photo directly onto the frame</p>
+          </div>
+
+          <!-- Right Column: Configure Your Frame Template -->
+          <div class="studio-controls-col">
+            
+            <h2 class="task-title-large">CONFIGURE YOUR FRAME</h2>
+            <p class="task-subtitle-dim">Upload your photo, set your builder details, and export your shareable PFP.</p>
+
+            <div class="task-divider"></div>
+
+            <!-- Format B Builder Details (Name & Stack/Role) -->
+            <div class="beige-control-group">
+              <div class="builder-meta-grid">
+                <div class="meta-field">
+                  <label for="builder-name" class="input-sub-label">BUILDER NAME / HANDLE</label>
+                  <input type="text" id="builder-name" placeholder="e.g. @satoshi" maxlength="22">
+                </div>
+                <div class="meta-field">
+                  <label for="builder-role" class="input-sub-label">STACK / ROLE</label>
+                  <input type="text" id="builder-role" placeholder="e.g. SOLANA / RUST" maxlength="22">
+                </div>
+              </div>
+            </div>
+
+            <!-- Select Photo Header & Dropzone -->
+            <div class="beige-control-group">
+              <div class="photo-select-header">
+                <label class="input-section-label">SELECT PHOTO</label>
+              </div>
+
+              <div class="photo-dropzone-box" id="upload-dropzone">
+                <input type="file" id="photo-upload" accept="image/jpeg,image/png,image/heic,image/heif,image/webp,.heic,.heif" hidden>
+                <div class="dropzone-icon-circle">↑</div>
+                <div class="dropzone-title">Upload Your Photo</div>
+                <div class="dropzone-subtitle">Drag & drop or <span class="browse-link">browse</span> (JPG, PNG, HEIC)</div>
+              </div>
+            </div>
+
+            <!-- Action Buttons (3D Yellow & Pink Buttons) -->
+            <div class="action-buttons-stack">
+              <button id="download-btn" class="btn-action-yellow">
+                <span class="btn-icon">⬇</span> DOWNLOAD
+              </button>
+              <button id="share-btn" class="btn-action-pink">
+                <span class="btn-icon">↗</span> SHARE ON X
+              </button>
+            </div>
+
+            <p class="share-paste-hint">💡 <strong>Tip:</strong> Your PFP is auto-copied to clipboard. Press <kbd>Ctrl + V</kbd> (<kbd>⌘ + V</kbd> on Mac) inside the tweet to attach your image.</p>
+            
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Bottom Floral Garland Ribbon -->
+    <div class="garland-ribbon-bottom">
+      <img src="assets/019-group-59467-54-3485.svg" alt="" class="garland-svg">
+    </div>
+
+  </section>
+
+  <!-- ===== TEAM UNO MODAL POPUP ===== -->
+  <div id="team-modal" class="team-modal-overlay" aria-hidden="true">
+    <div class="team-modal-backdrop" id="team-modal-backdrop"></div>
+    <div class="team-modal-card">
+      <div class="team-modal-header">
+        <div class="team-modal-title-group">
+          <span class="team-modal-badge">🌴 HH GOA 2026</span>
+          <h3 class="team-modal-title">TEAM UNO</h3>
+        </div>
+        <button id="close-team-modal" class="btn-close-modal" aria-label="Close Team Modal">✕</button>
+      </div>
+
+      <div class="team-members-list">
+        <!-- Member 1 -->
+        <div class="member-card">
+          <span class="member-name">Utsav Anand</span>
+          <div class="member-links">
+            <a href="https://x.com/utsavv_08" target="_blank" rel="noopener noreferrer" class="member-icon-btn x-btn" aria-label="Utsav Anand on X">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/utsavv08/" target="_blank" rel="noopener noreferrer" class="member-icon-btn linkedin-btn" aria-label="Utsav Anand on LinkedIn">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Member 2 -->
+        <div class="member-card">
+          <span class="member-name">Nandita Krishnan</span>
+          <div class="member-links">
+            <a href="https://x.com/pyaarchocobar" target="_blank" rel="noopener noreferrer" class="member-icon-btn x-btn" aria-label="Nandita Krishnan on X">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/inandita-krishnan/" target="_blank" rel="noopener noreferrer" class="member-icon-btn linkedin-btn" aria-label="Nandita Krishnan on LinkedIn">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Member 3 -->
+        <div class="member-card">
+          <span class="member-name">Ira Sharma</span>
+          <div class="member-links">
+            <a href="https://x.com/IraSharma1996" target="_blank" rel="noopener noreferrer" class="member-icon-btn x-btn" aria-label="Ira Sharma on X">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/ira-sharma-126a0631a/" target="_blank" rel="noopener noreferrer" class="member-icon-btn linkedin-btn" aria-label="Ira Sharma on LinkedIn">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="team-modal-footer">
+        <span>GOA, INDIA • 28 – 31 OCT 2026</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Popup -->
+  <div id="toast" class="toast-popup"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
