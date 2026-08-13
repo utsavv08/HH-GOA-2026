@@ -49,7 +49,7 @@ Navigate to [https://hh-goa-2026-dusky.vercel.app/].
 ## 👥 Built by TEAM UNO
 
 - **Utsav Anand** — [𝕏 (@utsavv_08)](https://x.com/utsavv_08) • [LinkedIn](https://www.linkedin.com/in/utsavv08/)
-- **Nandita Krishnan** — [𝕏 (@pyaarchocobar)](https://x.com/pyaarchocobar) • [LinkedIn](https://www.linkedin.com/in/inandita-krishnan/)
+- **Nandita Krishnan** — [𝕏 (@thisisnandita_)](https://x.com/thisisnandita_) • [LinkedIn](https://www.linkedin.com/in/inandita-krishnan/)
 - **Ira Sharma** — [𝕏 (@IraSharma1996)](https://x.com/IraSharma1996) • [LinkedIn](https://www.linkedin.com/in/ira-sharma-126a0631a/)
 
 ---
